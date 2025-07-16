@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/* 가운데영역 */
+.container{max-width: 1160px; margin: 0 auto; padding: 0 20px;}
+
+/* 헤더 */
+#header{height: 87px; line-height: 87px; position: fixed; left:0; right:0; top:0; background: rgba(0,0,0,.5); color: #fff; text-align: center; z-index: 999;} 
