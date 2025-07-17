@@ -622,9 +622,9 @@
 
             // counter 실행
             $('.counter').each(function () {
-                var $this = $(this);
-                var finalValue = parseInt($this.data('count'), 10); // 숫자 가져오기
-                var triggered = false;
+                let $this = $(this);
+                let finalValue = parseInt($this.data('count'), 10); // 숫자 가져오기
+                let triggered = false;
 
                 $this.waypoint(function () {
                     if (!triggered) {
