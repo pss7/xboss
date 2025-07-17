@@ -26,7 +26,7 @@ html, body{-webkit-overflow-scrolling: touch;  touch-action: auto; overscroll-be
 /* 비주얼 영역 */
 #visualWrap{padding: 200px 0 100px; position: relative; overflow: hidden; z-index: 1;}
 #visualWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background-color: rgba(0, 132, 255, 0.35); z-index: -1;}
-#visualWrap video{position: absolute; top:0; left:0; right:0; bottom: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;}
+#visualWrap video{position: absolute; top:0; left:0; right:0; bottom: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;  pointer-events: none;}
 #visualWrap.active::before{transform: scale(1);}
 #visualWrap .titleBox{margin-bottom: 102px; text-align: center;}
 #visualWrap .titleBox p{margin-bottom: 50px; text-align: center; color: #fff; font-size: 42px; font-weight: 700;}
