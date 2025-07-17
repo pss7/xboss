@@ -39,12 +39,6 @@
 #visualWrap .infoList li:nth-child(1) span::before{width: 36px; height: 36px; background: url(../images/main/main_icon01.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(2) span::before{width: 34px; height: 36px; background: url(../images/main/main_icon02.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(3) span::before{width: 22px; height: 36px; background: url(../images/main/main_icon03.svg)no-repeat center; background-size: contain;}
-
-
-
-
-
-
 #visualWrap .infoList li em{position: relative; display: inline-block; text-align: center; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; z-index: 1;}
 #visualWrap .infoList li em::before{content: ''; position: absolute; left:0; bottom: 0; width: 0; height: 3px; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); transition: all .6s; z-index: -1;}
 #visualWrap .infoList li:hover em::before{width: 100%;}
