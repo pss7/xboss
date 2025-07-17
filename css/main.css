@@ -33,13 +33,21 @@
 #visualWrap .titleBox em{margin-bottom: 36px; display: block; color: #fff; font-weight: 600; font-size: 22px;}
 #visualWrap .titleBox h2 img{display: block; margin: 0 auto;}
 #visualWrap .infoList{display: flex; justify-content: center; gap: 0 80px;}
-#visualWrap .infoList li{width: 320px; padding: 50px 20px; border-radius: 30px; background-color: #fff;}
+#visualWrap .infoList li{width: 320px; padding: 50px 20px; border-radius: 30px; background-color: #fff; text-align: center;}
 #visualWrap .infoList li span{margin-bottom: 5px; display: flex; flex-direction: column; align-items: center; gap: 15px 0; font-size: 20px; font-weight: 600; text-align: center; color: #3461FF;}
 #visualWrap .infoList li span::before{content: '';}
 #visualWrap .infoList li:nth-child(1) span::before{width: 36px; height: 36px; background: url(../images/main/main_icon01.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(2) span::before{width: 34px; height: 36px; background: url(../images/main/main_icon02.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(3) span::before{width: 22px; height: 36px; background: url(../images/main/main_icon03.svg)no-repeat center; background-size: contain;}
-#visualWrap .infoList li em{display: block; text-align: center; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+
+
+
+
+
+#visualWrap .infoList li em{position: relative; display: inline-block; text-align: center; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; z-index: 1;}
+#visualWrap .infoList li em::before{content: ''; position: absolute; left:0; bottom: 0; width: 0; height: 3px; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); transition: all .6s; z-index: -1;}
+#visualWrap .infoList li:hover em::before{width: 100%;}
 
 @media (max-width: 1024px){
 
