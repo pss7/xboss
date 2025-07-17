@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html, body{-webkit-overflow-scrolling: touch;  touch-action: auto; overscroll-behavior: auto;}
-#wrap{overflow-x: hidden;}
+
 
 /* 공통 - 제목 */
 .title{text-align: center;}
@@ -179,7 +179,7 @@ html, body{-webkit-overflow-scrolling: touch;  touch-action: auto; overscroll-be
 }
 
 /* 기업소개영역02 */
-#introduceWrap02{padding: 120px 0 0;}
+#introduceWrap02{padding: 120px 0 0; overflow: hidden;}
 #introduceWrap02 .title{margin-bottom: 130px;}
 #introduceWrap02 .imgBox{position: relative; margin-bottom: -6px; z-index: 9;}
 #introduceWrap02 .imgBox img{display: block; width: 100%; margin: 0 auto;}
@@ -257,7 +257,7 @@ html, body{-webkit-overflow-scrolling: touch;  touch-action: auto; overscroll-be
 }
 
 /* 기업소개영역04 */
-#introduceWrap04{padding: 120px 20px 190px calc(50% - 550px);; background-color: #F4F6FC;}
+#introduceWrap04{padding: 120px 20px 190px calc(50% - 550px);; background-color: #F4F6FC; overflow: hidden;}
 #introduceWrap04 .title{margin-bottom: 120px;}
 #introduceWrap04 .title h3{text-align: left;}
 #introduceWrap04 .title h3 br{display: block;}
