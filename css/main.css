@@ -25,7 +25,7 @@
 /* 비주얼 영역 */
 #visualWrap{padding: 200px 0 100px; position: relative; overflow: hidden; z-index: 1;}
 #visualWrap::after{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background-color: rgba(0, 132, 255, 0.35); z-index: -1;}
-#visualWrap::before{content: ''; position: absolute; top:0; left:0; right:0; bottom: 0; background: url(../images/main/main.svg)no-repeat center; background-size: cover; z-index: -1; transform: scale(1.5); transition: all 7s;}
+#visualWrap video{position: absolute; top:0; left:0; right:0; bottom: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;}
 #visualWrap.active::before{transform: scale(1);}
 #visualWrap .titleBox{margin-bottom: 102px; text-align: center;}
 #visualWrap .titleBox p{margin-bottom: 50px; text-align: center; color: #fff; font-size: 42px; font-weight: 700;}
@@ -39,9 +39,9 @@
 #visualWrap .infoList li:nth-child(1) span::before{width: 36px; height: 36px; background: url(../images/main/main_icon01.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(2) span::before{width: 34px; height: 36px; background: url(../images/main/main_icon02.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(3) span::before{width: 22px; height: 36px; background: url(../images/main/main_icon03.svg)no-repeat center; background-size: contain;}
-#visualWrap .infoList li em{position: relative; display: inline-block; text-align: center; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; z-index: 1;}
-#visualWrap .infoList li em::before{content: ''; position: absolute; left:0; bottom: 0; width: 0; height: 3px; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); transition: all .6s; z-index: -1;}
-#visualWrap .infoList li:hover em::before{width: 100%;}
+#visualWrap .infoList li p{position: relative; display: inline-block; z-index: 1; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#visualWrap .infoList li p::before{content: ''; position: absolute; left:0; bottom: 0; width: 0; height: 3px; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); transition: all .6s; z-index: -1;}
+#visualWrap .infoList li:hover p::before{width: 100%;}
 
 @media (max-width: 1024px){
 
@@ -52,7 +52,7 @@
   #visualWrap .titleBox em{font-size: 18px;}
   #visualWrap .titleBox h2 img{width: 500px;}
   #visualWrap .infoList li span{gap: 7px 0; font-size: 16px;}
-  #visualWrap .infoList li em{font-size: 23px;}
+  #visualWrap .infoList li p{font-size: 23px;}
   #visualWrap .infoList li{width: auto; flex: 1; padding: 38px 20px; border-radius: 15px;}
   #visualWrap .infoList li:nth-child(1) span::before{width: 22px; height: 22px; }
   #visualWrap .infoList li:nth-child(2) span::before{width: 22px; height: 22px;}
