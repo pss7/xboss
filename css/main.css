@@ -521,7 +521,7 @@ top: 50%; transform: translateY(-50%); right: -113px; background: url(../images/
 
 /* 오시는 길 영역 */
 #mapWrap{padding: 90px 0 14px; background-color: #0A1231;}
-#mapWrap .mapBox{padding-bottom: 97px; border-bottom: 2px solid #fff;}
+#mapWrap .mapBox{padding-bottom: 97px;}
 #mapWrap h3{margin-bottom: 25px; text-align: center; color: #fff; font-size: 30px;}
 #mapWrap address{margin-bottom: 30px; text-align: center; font-size: 18px; font-weight: 600; color: #fff;}
 #mapWrap span{display: block; width: 159px; height: 64px; line-height: 64px; margin: 0 auto 43px; border-radius: 50px; background-color: #3461FF; text-align: center; color: #fff; font-size: 20px;}
