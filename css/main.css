@@ -39,7 +39,7 @@
 #visualWrap .infoList li:nth-child(1) span::before{width: 36px; height: 36px; background: url(../images/main/main_icon01.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(2) span::before{width: 34px; height: 36px; background: url(../images/main/main_icon02.svg)no-repeat center; background-size: contain;}
 #visualWrap .infoList li:nth-child(3) span::before{width: 22px; height: 36px; background: url(../images/main/main_icon03.svg)no-repeat center; background-size: contain;}
-#visualWrap .infoList li p{position: relative; display: inline-block; z-index: 1; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#visualWrap .infoList li p{position: relative; display: inline-block; z-index: 1; font-size: 36px; font-weight: 700; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 #visualWrap .infoList li p::before{content: ''; position: absolute; left:0; bottom: 0; width: 0; height: 3px; background: linear-gradient(to right, rgb(26, 214, 227), rgb(97, 128, 253)); transition: all .6s; z-index: -1;}
 #visualWrap .infoList li:hover p::before{width: 100%;}
 
@@ -79,11 +79,19 @@
 @media (max-width: 414px){
 
   #visualWrap .infoList li span::before{display: none;}
-  #visualWrap .infoList li{position: relative; max-width: 280px; width: 100%; margin: 0 auto; padding: 28px 32px 28px 92px;}
+  #visualWrap .infoList li{position: relative; max-width: 300px; width: 100%; margin: 0 auto; padding: 28px 20px 28px 92px;}
   #visualWrap .infoList li::before{ content: ''; position: absolute; top: 50%; transform: translateY(-50%); left:0;}
   #visualWrap .infoList li:nth-child(1):before{width: 40px; height: 40px; left:32px; background: url(../images/main/main_icon01.svg)no-repeat center;}
   #visualWrap .infoList li:nth-child(2):before{width: 37px; height: 40px; left: 34px; background: url(../images/main/main_icon02.svg)no-repeat center;}
   #visualWrap .infoList li:nth-child(3):before{width: 25px; height: 40px; left: 40px; background: url(../images/main/main_icon03.svg)no-repeat center;}
+
+}
+
+@media(max-width: 360px){
+
+  #visualWrap .infoList li{padding: 28px;}
+  #visualWrap .infoList li span::before{display: block;}
+  #visualWrap .infoList li:before{display: none;}
 
 }
 
