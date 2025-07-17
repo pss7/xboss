@@ -54,9 +54,7 @@
                                     누적 시간 절약
                                 </span>
                                 <p>
-                                    <em class="counter">
-                                        8,400
-                                    </em>
+                                    <em class="counter" data-count="8400">0</em>
                                     시간
                                 </p>
                             </li>
@@ -65,8 +63,8 @@
                                     누적 비용 절감
                                 </span>
                                 <p>
-                                    <em class="counter">
-                                        117,600,000
+                                    <em class="counter" data-count="117600000">
+                                        0
                                     </em>
                                     원
                                 </p>
@@ -77,7 +75,7 @@
                                 </span>
                                 <p>
                                     <em class="counter" data-count="190">
-                                        190
+                                        0
                                     </em>
                                     %
                                 </p>
@@ -610,16 +608,41 @@
 
         $(function () {
 
-            //aos 초기화
-            $(window).load(function () {
+            $(window).on('load', function () {
                 AOS.init({
-                    duration: 800
+                    duration: 800,
+                    once: true
                 });
             });
 
-            $('.counter').counterUp({
-                delay: 20,
-                time: 1500
+            // 숫자 포맷 함수 (쉼표 넣기)
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+            // counter 실행
+            $('.counter').each(function () {
+                var $this = $(this);
+                var finalValue = parseInt($this.data('count'), 10); // 숫자 가져오기
+                var triggered = false;
+
+                $this.waypoint(function () {
+                    if (!triggered) {
+                        $({ countNum: 0 }).animate({ countNum: finalValue }, {
+                            duration: 1500,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(formatNumber(Math.floor(this.countNum)));
+                            },
+                            complete: function () {
+                                $this.text(formatNumber(this.countNum));
+                            }
+                        });
+                        triggered = true;
+                    }
+                }, {
+                    offset: '90%'
+                });
             });
 
         });
