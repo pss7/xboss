@@ -608,9 +608,11 @@
 
         $(function () {
 
-            AOS.init({
-                duration: 800,
-                once: true
+            $(window).on('load', function () {
+                AOS.init({
+                    duration: 800,
+                    once: true
+                });
             });
 
             // 숫자 포맷 함수 (쉼표 넣기)
